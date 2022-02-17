@@ -9,7 +9,7 @@
 <body style = "font-family: Arial, Helvetica, sans-serif">
 
 <table style="width:100%;text-align:left;border-collapse: collapse;">
-<tr>
+<tr style = "vertical-align:top;">
 <td>
 <div id = "selectLHIN0" style="color:#000000;" onclick="selectLHIN(0)">All LHINs in Ontario:</div>
 <div id = "selectLHIN1" style="color:#999999;" onclick="selectLHIN(1)">&nbsp;1 - Erie St. Clair</div>
@@ -44,9 +44,11 @@ Enter Your Postal Code:
 
 <div id="currentLHIN>" style = "visibility:hidden;">&nbsp;</div>
 
+<div id = "divContainer" style = "overflow-x: auto; white-space: nowrap;">
+
 <table style="width:100%;text-align:left;border-collapse: collapse;">
 <tr>
-<th style = "border-top:1px solid;border-bottom:1px solid;border-right:1px solid;" rowspan = "2">Specialty of Practice</th>
+<th name = "Specialty of Practice" style = "border-top:1px solid;border-bottom:1px solid;border-right:1px solid;" rowspan = "2">Specialty of Practice</th>
 <th name = "LHINhead1" style = "border-top:1px solid;border-bottom:1px solid;border-right:1px solid" colspan = "2">Erie St. Clair</th>
 <th name = "LHINhead2" style = "border-top:1px solid;border-bottom:1px solid;border-right:1px solid" colspan = "2">South West</th>
 <th name = "LHINhead3" style = "border-top:1px solid;border-bottom:1px solid;border-right:1px solid" colspan = "2">Waterloo Wellington</th>
@@ -2869,6 +2871,8 @@ Enter Your Postal Code:
 </tr>
 </table>
 
+
+</div>
 
 </body>
 </html>

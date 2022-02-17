@@ -5,12 +5,13 @@ function selectLHIN(current)  {
 	var mymap = document.getElementById("LHINmap");
 	//var head_cell;
 	
-	t.innerHTML = ''
+	if (current == 0) {t.innerHTML = '' ;}
 	mymap.src = "../pic/ontario-lhins-map-gtranked" +val+".png"
 	
 	for (let i = 0; i <= 14 ; i++) {
 		
 		let selectLHIN = document.getElementById("selectLHIN" + i);
+		
 		if (i == current) {
 			selectLHIN.style.color = "#000000";
 		}
@@ -23,7 +24,6 @@ function selectLHIN(current)  {
 		let left_cell = document.getElementsByName("LHINleft"+i);
 		if (i == current)  {
 			for(let j=0; j< left_cell.length; j++){
-				//console.log(left_cell[j].style)
 				left_cell[j].style.borderLeft = "2px solid";
 			}
 		}
@@ -34,10 +34,7 @@ function selectLHIN(current)  {
 			}
 		}
 		let right_cell = document.getElementsByName("LHINright"+i);
-		console.log('for i = '+i+' Right cell length '+ right_cell.length);
-		console.log(i+' '+ current);
 		if (i == current)  {
-			console.log('i cycle');
 			for(let j=0; j< right_cell.length; j++){
 				right_cell[j].style.borderRight = "2px solid";
 			}
@@ -57,8 +54,13 @@ function selectLHIN(current)  {
 			head_cell[0].style.borderBottom = "2px solid";
 			head_cell[0].style.borderTop = "2px solid";
 			head_cell[0].style.borderRight = "2px solid";
-			head_cell[0].style.backgroundColor = "rgb(200, 200, 200)"
-			//console.log(head_cell[0].style)
+			head_cell[0].style.backgroundColor = "rgb(200, 200, 200)";
+			console.log(head_cell[0].offsetLeft);
+			let scrolling_div = document.getElementById("divContainer");
+			
+			let firstColumn = document.getElementsByName("Specialty of Practice")[0];
+				
+			scrolling_div.scrollLeft = head_cell[0].offsetLeft - firstColumn.offsetWidth;
 		}
 		else if (i == current -1) {
 			head_cell[0].style.borderBottom = "1px solid";
