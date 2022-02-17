@@ -1,5 +1,6 @@
 function selectLHIN(current)  {
 	var val = current
+	if (val == 15) {val = 0;}
 	var t = document.getElementById("LHINresult");
 	//var current = document.getElementById("currentLHIN");
 	var mymap = document.getElementById("LHINmap");
@@ -55,12 +56,16 @@ function selectLHIN(current)  {
 			head_cell[0].style.borderTop = "2px solid";
 			head_cell[0].style.borderRight = "2px solid";
 			head_cell[0].style.backgroundColor = "rgb(200, 200, 200)";
-			console.log(head_cell[0].offsetLeft);
+			//console.log(head_cell[0].offsetLeft);
 			let scrolling_div = document.getElementById("divContainer");
 			
 			let firstColumn = document.getElementsByName("Specialty of Practice")[0];
-				
-			scrolling_div.scrollLeft = head_cell[0].offsetLeft - firstColumn.offsetWidth;
+			console.log(window.innerWidth);
+			console.log(head_cell[0].offsetLeft);
+			console.log(firstColumn.offsetWidth);
+			if ((head_cell[0].offsetLeft - scrolling_div.scrollLeft + firstColumn.offsetWidth) > window.innerWidth ) {
+				scrolling_div.scrollLeft = head_cell[0].offsetLeft - firstColumn.offsetWidth;
+			}
 		}
 		else if (i == current -1) {
 			head_cell[0].style.borderBottom = "1px solid";
