@@ -63,7 +63,7 @@ function selectLHIN(current)  {
 			console.log(window.innerWidth);
 			console.log(head_cell[0].offsetLeft);
 			console.log(firstColumn.offsetWidth);
-			if ((head_cell[0].offsetLeft - scrolling_div.scrollLeft + firstColumn.offsetWidth) > window.innerWidth ) {
+			if (((head_cell[0].offsetLeft - scrolling_div.scrollLeft + firstColumn.offsetWidth) > window.innerWidth ) || (head_cell[0].offsetLeft < scrolling_div.scrollLeft) ) {
 				scrolling_div.scrollLeft = head_cell[0].offsetLeft - firstColumn.offsetWidth;
 			}
 		}
