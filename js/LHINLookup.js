@@ -1,5 +1,6 @@
 var LHIN = window.LHIN || {}
 
+
 LHIN.PostalViewModel = function () {
 
     var load = function (postalcode) {
@@ -42,6 +43,9 @@ LHIN.PostalViewModel = function () {
 
     setHtml = function (val) {
         var t = document.getElementById("LHINresult");
+		var current = document.getElementById("currentLHIN");
+		var mymap = document.getElementById("LHINmap");
+		
         var name = "";
         var url = "";
         
@@ -104,7 +108,8 @@ LHIN.PostalViewModel = function () {
 				break;
 		}
 		t.innerHTML = "You are in the <a href='" + url + "'>" + name + "</a> LHIN.";
-        
+        //current.innerHTML = val
+		mymap.src = "../pic/ontario-lhins-map-gtranked" +val+".png"
 
     },
 
