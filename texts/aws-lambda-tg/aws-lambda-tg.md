@@ -55,6 +55,7 @@ Select the newly created file system, go to Details - Access points. There are n
 I'll define name as lambda-citizenship-efs and will not specify any POSIX parameters for now and leave all other parameters at default or empty values.
 
 Now go to the list of Lamda functions, select the needed function, go to Actions - View details - Configuration - VPC - Edit VPC. Choose your default VPC.
+Select all subnets and default security group. 
 
 NB: drawing!
 
@@ -65,3 +66,10 @@ Warning:
 
 More info at https://aws.amazon.com/blogs/compute/using-amazon-efs-for-aws-lambda-in-your-serverless-applications/
 
+### Allowing Lambda to access EFS system
+
+### Allowing Lambda to access internet
+
+### Uploading the file to EFC
+
+### Accessing Lambda through REST APIs
