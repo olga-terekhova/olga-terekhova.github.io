@@ -21,9 +21,9 @@ EC2 vs Lambda
 
 A sample AWS Lambda function
 
-> ![A list of Labmda functions](https://github.com/olga-terekhova/olga-terekhova.github.io/blob/main/texts/aws-lambda-tg/aws1.png)
+> ![A list of Labmda functions](aws1.png)
 
-> ![A stub of AWS function](https://github.com/olga-terekhova/olga-terekhova.github.io/blob/main/texts/aws-lambda-tg/aws2.png)
+> ![A stub of AWS function](aws2.png)
 
 ### Figuring out storage
 The credentials are stored in a config file, so we need to put the file somewhere our function can access. 
@@ -36,10 +36,20 @@ This gives us a choice between AWS storage offerings. [Here](https://dzone.com/a
 https://aws.amazon.com/blogs/compute/using-amazon-efs-for-aws-lambda-in-your-serverless-applications/
 
 We create an instance of EFC by searching for EFC and Creating a File System.
-> ![Creating a File System](https://github.com/olga-terekhova/olga-terekhova.github.io/blob/main/texts/aws-lambda-tg/aws3.png)
+> ![Creating a File System](aws3.png)
 
 Any name will do. Choose a default VPC. 
-> ![Creating a File System](https://github.com/olga-terekhova/olga-terekhova.github.io/blob/main/texts/aws-lambda-tg/aws4.png)
+> ![Creating a File System](aws4.png)
 
 And it's created!
-> ![Creating a File System](https://github.com/olga-terekhova/olga-terekhova.github.io/blob/main/texts/aws-lambda-tg/aws5.png)
+> ![Creating a File System](aws5.png)
+
+
+### Attaching storage to the Lambda function
+
+Select the newly created file system, go to Details - Access points. There are none yet, so let's create an access point for our EFS file system.
+
+>  ![Creating an access point](aws6.png)
+
+More info at https://aws.amazon.com/blogs/compute/using-amazon-efs-for-aws-lambda-in-your-serverless-applications/
+
