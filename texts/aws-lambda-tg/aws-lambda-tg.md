@@ -28,9 +28,9 @@ A sample AWS Lambda function
 ### Figuring out storage
 The credentials are stored in a config file, so we need to put the file somewhere our function can access. 
 
-Functions can use /tmp space up to 500MB. That's more than enough space for us, but we need something persistent. 
+Functions can use /tmp space up to 500MB. That would be more than enough space for us, but /tmp may get emptied by AWS between function runs. We need something persistent. 
 
-Another option would be to host a file outside of AWS, like on GitHub. However, the file is senstitive, because it contains credentials for the IRCC account, so at least store it in a private repository, not a public one! I believe that code hosting site is not an appropriate place for credentials, so I want to place the file somewhere in AWS. 
+Another option would be to host a file outside of AWS, like on GitHub. However, the file is senstitive, because it contains credentials for the IRCC account, so at least it should be stored in a private repository, not a public one! I believe that code hosting site is not an appropriate place for credentials, so I want to place the file somewhere in AWS. 
 
-[Here](https://dzone.com/articles/confused-by-aws-storage-options-s3-ebs-amp-efs-explained) to read about the difference between S3, EBS and EFS. For our case we just need a basic csv file stored, so EFS suits us the best. EFS provides us basic file structure paradigm for storing a simple file in a conventional format, and it provides us elasticity of size, which means we only use as much disk space as our small file needs. 
+This gives us a choice between AWS storage offerings. [Here](https://dzone.com/articles/confused-by-aws-storage-options-s3-ebs-amp-efs-explained) to read about the difference between S3, EBS and EFS. For our case we just need a basic text file stored, so EFS suits us the best. EFS provides us basic file structure paradigm for storing a simple file in a conventional format, and it provides us elasticity of size, which means we only use as much disk space as our small file needs. 
 https://aws.amazon.com/blogs/compute/using-amazon-efs-for-aws-lambda-in-your-serverless-applications/
