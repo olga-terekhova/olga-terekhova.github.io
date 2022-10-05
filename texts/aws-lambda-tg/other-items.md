@@ -11,6 +11,8 @@ Sounds good. I hope I'll get the citizenship before those 12 months! Although re
 
 Amazon Standard class looks good and it's covered by the Free Tier. 
 
+## Set up Budgets
+
 # Installation instructions
 
 
