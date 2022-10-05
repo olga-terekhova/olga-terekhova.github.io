@@ -19,3 +19,5 @@ Amazon Standard class looks good and it's covered by the Free Tier.
 # Security
 
 What information should I delete from the screenshots? Are any IDs vulnerable if exposed to outside?
+
+# Identity management
