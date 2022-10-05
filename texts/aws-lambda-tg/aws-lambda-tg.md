@@ -5,4 +5,13 @@ My first iteration is to whip up some Python code that takes credentials from a 
 So my biggest ambition now is to wrap the code into a labmda function which runs every day or gets triggered from a Telegram bot! 🤩 
 The question is - will I make before my citizenship process is completed?
 
+What we have now:
+Python code
+A sample AWS Lambda function
+
+![A list of Labmda functions](https://github.com/olga-terekhova/olga-terekhova.github.io/blob/main/texts/aws-lambda-tg/aws1.png)
+
+![A stub of AWS function](https://github.com/olga-terekhova/olga-terekhova.github.io/blob/main/texts/aws-lambda-tg/aws2.png)
+
+hello
 
