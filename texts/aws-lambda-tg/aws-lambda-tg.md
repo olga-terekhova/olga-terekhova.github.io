@@ -28,7 +28,7 @@ A sample AWS Lambda function
 ### Figuring out storage
 The credentials are stored in a config file, so we need to put the file somewhere our function can access. 
 
-Functions can use /tmp space up to 500MB. That would be more than enough space for us, but /tmp may get emptied by AWS between function runs. We need something persistent. 
+Functions can use /tmp space up to 512MB. That would be more than enough space for us, but /tmp is ephemeral, meaning that it may get emptied by AWS between function runs. We need something persistent. 
 
 Another option would be to host a file outside of AWS, like on GitHub. However, the file is senstitive, because it contains credentials for the IRCC account, so at least it should be stored in a private repository, not a public one! I believe that code hosting site is not an appropriate place for credentials, so I want to place the file somewhere in AWS. 
 
