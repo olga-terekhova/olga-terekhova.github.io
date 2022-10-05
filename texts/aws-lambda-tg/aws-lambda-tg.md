@@ -34,3 +34,12 @@ Another option would be to host a file outside of AWS, like on GitHub. However, 
 
 This gives us a choice between AWS storage offerings. [Here](https://dzone.com/articles/confused-by-aws-storage-options-s3-ebs-amp-efs-explained) to read about the difference between S3, EBS and EFS. For our case we just need a basic text file stored, so EFS suits us the best. EFS provides us basic file structure paradigm for storing a simple file in a conventional format, and it provides us elasticity of size, which means we only use as much disk space as our small file needs. 
 https://aws.amazon.com/blogs/compute/using-amazon-efs-for-aws-lambda-in-your-serverless-applications/
+
+We create an instance of EFC by searching for EFC and Creating a File System.
+![Creating a File System](https://github.com/olga-terekhova/olga-terekhova.github.io/blob/main/texts/aws-lambda-tg/aws3.png)
+
+Any name will do. Choose a default VPC. 
+![Creating a File System](https://github.com/olga-terekhova/olga-terekhova.github.io/blob/main/texts/aws-lambda-tg/aws4.png)
+
+And it's created!
+![Creating a File System](https://github.com/olga-terekhova/olga-terekhova.github.io/blob/main/texts/aws-lambda-tg/aws5.png)
