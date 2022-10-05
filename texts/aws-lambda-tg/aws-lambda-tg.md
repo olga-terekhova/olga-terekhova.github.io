@@ -57,6 +57,9 @@ I'll define name as lambda-citizenship-efs and will not specify any POSIX parame
 Now go to the list of Lamda functions, select the needed function, go to Actions - View details - Configuration - VPC - Edit VPC. Choose your default VPC.
 Select all subnets and default security group. 
 
+Error:
+> AWS Lambda:The provided execution role does not have permissions to call DescribeNetworkInterfaces on EC2
+
 NB: drawing!
 
 Warning:
