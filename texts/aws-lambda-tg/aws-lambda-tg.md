@@ -80,9 +80,9 @@ You don't need to specify NAT:
 
 **To explore:** Public Lambda, attaching gateway to the VPC (https://aws.amazon.com/premiumsupport/knowledge-center/create-attach-igw-vpc/).
 
-**Possible solution with downsides:** Public Lambda with Elastic IP as public IP ( https://stackoverflow.com/questions/55771064/how-to-choose-elastic-ip-when-my-aws-lambda-function-execute )
+**Possible solution with downsides:** Public Lambda with Elastic IP as public IP attached to ENI: ( https://stackoverflow.com/questions/55771064/how-to-choose-elastic-ip-when-my-aws-lambda-function-execute )
 
-Instructions about ENI and EIP: https://stackoverflow.com/questions/50276852/lambda-function-within-vpc-doesnt-have-access-to-public-internet
+**Instructions about ENI and EIP:** https://stackoverflow.com/questions/50276852/lambda-function-within-vpc-doesnt-have-access-to-public-internet
 
 Will not work if parallel instances are run, because they create new ENI IDs.
 
@@ -115,6 +115,7 @@ https://devops.stackexchange.com/questions/4944/placing-an-aws-lambda-in-a-publi
 
 https://stackoverflow.com/questions/52992085/why-cant-an-aws-lambda-function-inside-a-public-subnet-in-a-vpc-connect-to-the
 
+Maybe lambda + API + S3 doesn't need to be attached to VPC.
 https://stackoverflow.com/questions/52992085/why-cant-an-aws-lambda-function-inside-a-public-subnet-in-a-vpc-connect-to-the#:~:text=Be%20sure%20that%20all%20the,times%20without%20any%20obvious%20cause.
 
 
@@ -125,6 +126,7 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html
 
 https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html?icmpid=docs_lambda_console#vpc-internet
 https://dev.to/aws-builders/how-to-connect-efs-disk-to-a-lambda-function-360g
+https://stackoverflow.com/questions/61554862/lambda-in-a-vpc-not-able-to-access-internet
 
 
 ### Attaching storage to the Lambda function
@@ -162,3 +164,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/internet-access-lambda-fu
 AWS Lambda:The provided execution role does not have permissions to call DescribeNetworkInterfaces on EC2
 
 ### Accessing Lambda through REST APIs
+
+https://stackoverflow.com/questions/50276852/lambda-function-within-vpc-doesnt-have-access-to-public-internet
+
+https://medium.com/@shontauro/how-can-i-turn-my-restful-api-into-a-serverless-application-and-deploy-it-to-aws-lambda-step-by-ec7ce38e18be
