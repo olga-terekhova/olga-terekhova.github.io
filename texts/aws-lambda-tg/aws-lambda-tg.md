@@ -10,6 +10,8 @@ My first iteration is to whip up some Python code that takes credentials from a 
 So my biggest ambition now is to wrap the code into a labmda function which runs every day or gets triggered from a Telegram bot! 🤩 
 The question is - will I make before my citizenship process is completed?
 
+` hello world `
+
 ## Serverless version
 
 What we have now:
@@ -37,7 +39,7 @@ One of consequences of using AWS Storage is the need to configure our Lambda fun
 https://aws.amazon.com/blogs/compute/using-amazon-efs-for-aws-lambda-in-your-serverless-applications/
 
 We create an instance of EFC by searching for EFC and Creating a File System.
-> ![Creating a File System](aws3.png)
+> ![Creating a File System](aws3.png) 
 
 Any name will do. Choose a default VPC. 
 > ![Creating a File System](aws4.png)
@@ -54,9 +56,11 @@ Amazon says:
 > https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html?icmpid=docs_lambda_console#vpc-internet
 > By default, Lambda runs your functions in a secure VPC with access to AWS services and the internet. Lambda owns this VPC, which isn't connected to your account's default VPC. When you connect a function to a VPC in your account, the function can't access the internet unless your VPC provides access.
 
-So if we didn't need to connect to storage, there would be no need to set up VPC. 
+So if we didn't need to connect to storage, there would be no need to set up VPC either by editing our account's default VPC or creating a new one. 
 
 
+https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html?icmpid=docs_lambda_console#vpc-internet
+https://dev.to/aws-builders/how-to-connect-efs-disk-to-a-lambda-function-360g
 
 
 ### Attaching storage to the Lambda function
@@ -73,6 +77,8 @@ Select all subnets and default security group.
 Error:
 > AWS Lambda:The provided execution role does not have permissions to call DescribeNetworkInterfaces on EC2
 
+Execution role: https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html
+
 NB: drawing!
 
 
@@ -81,7 +87,11 @@ More info at https://aws.amazon.com/blogs/compute/using-amazon-efs-for-aws-lambd
 
 ### Allowing Lambda to access EFS system
 
+https://docs.aws.amazon.com/lambda/latest/dg/configuration-filesystem.html
+
 ### Allowing Lambda to access internet
+
+https://aws.amazon.com/premiumsupport/knowledge-center/internet-access-lambda-function/
 
 ### Uploading the file to EFC
 
