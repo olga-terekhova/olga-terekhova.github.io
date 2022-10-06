@@ -80,6 +80,10 @@ You don't need to specify NAT:
 
 **To explore:** Public Lambda, attaching gateway to the VPC (https://aws.amazon.com/premiumsupport/knowledge-center/create-attach-igw-vpc/).
 
+https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html
+
+> If a subnet is associated with a route table that has a route to an internet gateway, it's known as a public subnet. If a subnet is associated with a route table that does not have a route to an internet gateway, it's known as a private subnet.
+
 https://aws.amazon.com/premiumsupport/knowledge-center/internet-access-lambda-function/
 
 https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html
