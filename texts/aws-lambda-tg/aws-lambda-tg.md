@@ -78,10 +78,32 @@ You don't need to specify NAT:
 
 **To explore:** NAT instance as a cheaper alternative to the NAT gateway.
 
+https://aws.amazon.com/premiumsupport/knowledge-center/internet-access-lambda-function/
+
+https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html
+
+https://aws.amazon.com/premiumsupport/knowledge-center/vpc-reduce-nat-gateway-transfer-costs/
+
+https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html
+
+https://aws.amazon.com/premiumsupport/knowledge-center/internet-access-lambda-function/
+
+https://aws-core-services.ws.kabits.com/two-tier-application-linux/vpc/create-vpc/
+
 NAT gateway is unreasonably expensive. It's $30-35 per month. 
 Opinion: projects without PII or PCI data probably do not use private subnets in the beginning. 
 
-Here they say lambda cannot just be put in public subnet: https://devops.stackexchange.com/questions/4944/placing-an-aws-lambda-in-a-public-subnet
+Here they say lambda cannot just be put in public subnet: 
+
+https://devops.stackexchange.com/questions/4944/placing-an-aws-lambda-in-a-public-subnet
+
+https://stackoverflow.com/questions/52992085/why-cant-an-aws-lambda-function-inside-a-public-subnet-in-a-vpc-connect-to-the
+
+https://stackoverflow.com/questions/52992085/why-cant-an-aws-lambda-function-inside-a-public-subnet-in-a-vpc-connect-to-the#:~:text=Be%20sure%20that%20all%20the,times%20without%20any%20obvious%20cause.
+
+
+Default config:
+https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html
 
 ?? lambda in private subnet? or in custom vpc? or in its own vpc but connected to a custom vpc? 
 
