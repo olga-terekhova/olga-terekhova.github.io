@@ -23,3 +23,7 @@ What information should I delete from the screenshots? Are any IDs vulnerable if
 # Identity management
 
 https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html
+
+# DevOps
+
+Learn Terraform
