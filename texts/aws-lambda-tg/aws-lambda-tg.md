@@ -80,6 +80,8 @@ You don't need to specify NAT:
 
 **To explore:** Public Lambda, attaching gateway to the VPC (https://aws.amazon.com/premiumsupport/knowledge-center/create-attach-igw-vpc/).
 
+** Possible solution with downsides:** Public Labmda with Elastic IP as public IP ( https://stackoverflow.com/questions/55771064/how-to-choose-elastic-ip-when-my-aws-lambda-function-execute )
+
 https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html
 
 > If a subnet is associated with a route table that has a route to an internet gateway, it's known as a public subnet. If a subnet is associated with a route table that does not have a route to an internet gateway, it's known as a private subnet.
