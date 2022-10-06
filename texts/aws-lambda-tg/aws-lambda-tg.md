@@ -45,6 +45,19 @@ Any name will do. Choose a default VPC.
 And it's created!
 > ![Creating a File System](aws5.png)
 
+### Figuring out VPC
+
+We need to have communication between our Lambda function, our storage and the internet. Storage should be private and not accessible from the internet. Thus, Lambda function need to be able to connect to the private area and to the public area. This is set up using VPC.
+
+Amazon says:
+> When you connect a function to a VPC in your account, it does not have access to the internet unless your VPC provides access. To give your function access to the internet, route outbound traffic to a NAT gateway in a public subnet
+> https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html?icmpid=docs_lambda_console#vpc-internet
+> By default, Lambda runs your functions in a secure VPC with access to AWS services and the internet. Lambda owns this VPC, which isn't connected to your account's default VPC. When you connect a function to a VPC in your account, the function can't access the internet unless your VPC provides access.
+
+So if we didn't need to connect to storage, there would be no need to set up VPC. 
+
+
+
 
 ### Attaching storage to the Lambda function
 
@@ -62,10 +75,7 @@ Error:
 
 NB: drawing!
 
-Warning:
-> When you connect a function to a VPC in your account, it does not have access to the internet unless your VPC provides access. To give your function access to the internet, route outbound traffic to a NAT gateway in a public subnet
-> https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html?icmpid=docs_lambda_console#vpc-internet
-> By default, Lambda runs your functions in a secure VPC with access to AWS services and the internet. Lambda owns this VPC, which isn't connected to your account's default VPC. When you connect a function to a VPC in your account, the function can't access the internet unless your VPC provides access.
+
 
 More info at https://aws.amazon.com/blogs/compute/using-amazon-efs-for-aws-lambda-in-your-serverless-applications/
 
