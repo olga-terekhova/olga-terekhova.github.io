@@ -75,4 +75,6 @@ More info at https://aws.amazon.com/blogs/compute/using-amazon-efs-for-aws-lambd
 
 ### Uploading the file to EFC
 
+AWS Lambda:The provided execution role does not have permissions to call DescribeNetworkInterfaces on EC2
+
 ### Accessing Lambda through REST APIs
