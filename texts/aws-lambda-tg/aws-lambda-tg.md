@@ -84,6 +84,8 @@ You don't need to specify NAT:
 
 Instructions about ENI and EIP: https://stackoverflow.com/questions/50276852/lambda-function-within-vpc-doesnt-have-access-to-public-internet
 
+Will not work if parallel instances are run, because they create new ENI IDs.
+
 https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html
 
 > If a subnet is associated with a route table that has a route to an internet gateway, it's known as a public subnet. If a subnet is associated with a route table that does not have a route to an internet gateway, it's known as a private subnet.
