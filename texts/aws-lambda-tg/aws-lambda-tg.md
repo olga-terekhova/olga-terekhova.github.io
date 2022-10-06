@@ -64,6 +64,19 @@ So if we didn't need to connect to storage, there would be no need to set up VPC
 Go to VPC dashboard and click Create VPC:
 ![Create VPC](aws7.png)
 
+Choose VPC and more (it means creating of subnets, routing tables, network connections).
+In my case the suggested setup starts with a default configuration with subnets spread across two availability zones, with 1 public and 1 private subnet on each availability zone.
+
+Change the project name if needed (lambda-citizen in my case). 
+
+You don't need to specify NAT:
+
+>  NAT gateways enable resources in private subnets to reach the internet. 
+
+In our case we don't need any internet connection from the private subnet where our storage is located. Lambda function will have access to both private and and public subnet. 
+
+?? lambda in private subnet? or in custom vpc? or in its own vpc but connected to a custom vpc? 
+
 https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html?icmpid=docs_lambda_console#vpc-internet
 https://dev.to/aws-builders/how-to-connect-efs-disk-to-a-lambda-function-360g
 
