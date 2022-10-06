@@ -78,6 +78,8 @@ You don't need to specify NAT:
 
 **To explore:** NAT instance as a cheaper alternative to the NAT gateway.
 
+**To explore:** Public Lambda, attaching gateway to the VPC (https://aws.amazon.com/premiumsupport/knowledge-center/create-attach-igw-vpc/).
+
 https://aws.amazon.com/premiumsupport/knowledge-center/internet-access-lambda-function/
 
 https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html
