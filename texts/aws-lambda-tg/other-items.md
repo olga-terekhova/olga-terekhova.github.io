@@ -21,3 +21,5 @@ Amazon Standard class looks good and it's covered by the Free Tier.
 What information should I delete from the screenshots? Are any IDs vulnerable if exposed to outside?
 
 # Identity management
+
+https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html
