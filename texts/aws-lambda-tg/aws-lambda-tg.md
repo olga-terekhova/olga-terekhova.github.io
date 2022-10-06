@@ -76,10 +76,12 @@ You don't need to specify NAT:
 **Hypothesis:** In our case we don't need any internet connection from the private subnet where our storage is located. Lambda function will have access to both private and and public subnet. Or no? Or can we use endpoints instead? 
 **Hypothesis:** If we put Lambda in the public subnet, then we only need interenet gateway and not NAT gateway. Pay close attention to security then. 
 
-**To explore:** NAT instance instead of NAT gateway.
+**To explore:** NAT instance as a cheaper alternative to the NAT gateway.
 
-NAT gateway is unreasonably expensive. It's a minimum of $30 per month. 
+NAT gateway is unreasonably expensive. It's $30-35 per month. 
 Opinion: projects without PII or PCI data probably do not use private subnets in the beginning. 
+
+Here they say lambda cannot just be put in public subnet: https://devops.stackexchange.com/questions/4944/placing-an-aws-lambda-in-a-public-subnet
 
 ?? lambda in private subnet? or in custom vpc? or in its own vpc but connected to a custom vpc? 
 
