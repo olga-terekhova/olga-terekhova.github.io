@@ -61,6 +61,8 @@ Amazon says:
 (https://docs.aws.amazon.com/lambda/latest/operatorguide/networking-vpc.html)
 So if we didn't need to connect to storage, there would be no need to set up VPC either by editing our account's default VPC or creating a new one. 
 
+Go to VPC dashboard and click Create VPC:
+![Create VPC](aws7.png)
 
 https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html?icmpid=docs_lambda_console#vpc-internet
 https://dev.to/aws-builders/how-to-connect-efs-disk-to-a-lambda-function-360g
