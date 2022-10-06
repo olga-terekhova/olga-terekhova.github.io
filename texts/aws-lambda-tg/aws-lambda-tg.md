@@ -84,6 +84,10 @@ https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html
 
 > If a subnet is associated with a route table that has a route to an internet gateway, it's known as a public subnet. If a subnet is associated with a route table that does not have a route to an internet gateway, it's known as a private subnet.
 
+https://www.tinystacks.com/blog-post/aws-cost-optimization-nat-instances-vs-nat-gateways/
+
+> For public Internet data transfers, you may want to move your data transfers out of a private subnet and into a public subnet. Traffic that flows through an Internet gateway accrues no additional charges. The trade-off is that you'll lose some of the security benefits from running within a private subnet. If you go this route, ensure that your network security policies on your public subnet are strictly configured to prevent attempted ingress from malicious actors.
+
 https://aws.amazon.com/premiumsupport/knowledge-center/internet-access-lambda-function/
 
 https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html
