@@ -82,6 +82,8 @@ You don't need to specify NAT:
 
 **Possible solution with downsides:** Public Lambda with Elastic IP as public IP ( https://stackoverflow.com/questions/55771064/how-to-choose-elastic-ip-when-my-aws-lambda-function-execute )
 
+Instructions about ENI and EIP: https://stackoverflow.com/questions/50276852/lambda-function-within-vpc-doesnt-have-access-to-public-internet
+
 https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html
 
 > If a subnet is associated with a route table that has a route to an internet gateway, it's known as a public subnet. If a subnet is associated with a route table that does not have a route to an internet gateway, it's known as a private subnet.
