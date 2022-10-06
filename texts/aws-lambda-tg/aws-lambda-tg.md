@@ -67,13 +67,17 @@ Go to VPC dashboard and click Create VPC:
 Choose VPC and more (it means creating of subnets, routing tables, network connections).
 In my case the suggested setup starts with a default configuration with subnets spread across two availability zones, with 1 public and 1 private subnet on each availability zone.
 
-Change the project name if needed (lambda-citizen in my case). 
+Change the project name if needed. 
 
 You don't need to specify NAT:
 
 >  NAT gateways enable resources in private subnets to reach the internet. 
 
-In our case we don't need any internet connection from the private subnet where our storage is located. Lambda function will have access to both private and and public subnet. 
+**Hypothesis:** In our case we don't need any internet connection from the private subnet where our storage is located. Lambda function will have access to both private and and public subnet. Or no? Or can we use endpoints instead? 
+**Hypothesis:** If we put Lambda in the public subnet, then we only need interenet gateway and not NAT gateway. Pay close attention to security then. 
+
+NAT gateway is unreasonably expensive. It's a minimum of $30 per month. 
+Opinion: projects without PII or PCI data probably do not use private subnets in the beginning. 
 
 ?? lambda in private subnet? or in custom vpc? or in its own vpc but connected to a custom vpc? 
 
