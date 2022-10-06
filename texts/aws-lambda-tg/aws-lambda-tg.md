@@ -76,6 +76,8 @@ You don't need to specify NAT:
 **Hypothesis:** In our case we don't need any internet connection from the private subnet where our storage is located. Lambda function will have access to both private and and public subnet. Or no? Or can we use endpoints instead? 
 **Hypothesis:** If we put Lambda in the public subnet, then we only need interenet gateway and not NAT gateway. Pay close attention to security then. 
 
+**To explore:** NAT instance instead of NAT gateway.
+
 NAT gateway is unreasonably expensive. It's a minimum of $30 per month. 
 Opinion: projects without PII or PCI data probably do not use private subnets in the beginning. 
 
