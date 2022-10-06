@@ -56,6 +56,9 @@ Amazon says:
 > https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html?icmpid=docs_lambda_console#vpc-internet
 > By default, Lambda runs your functions in a secure VPC with access to AWS services and the internet. Lambda owns this VPC, which isn't connected to your account's default VPC. When you connect a function to a VPC in your account, the function can't access the internet unless your VPC provides access.
 
+> Lambda functions always run inside VPCs owned by the Lambda service. As with customer-owned VPCs, this allows the service to apply network access and security rules to everything within the VPC. These VPCs are not visible to customers, the configurations are maintained automatically, and monitoring is managed by the service.
+> When you use some AWS services, they create resources that are only accessible from within your customer VPC. To access these resources with Lambda, your Lambda function must also be configured for access to the same VPC. Importantly, unless you are accessing services with resources in a customer VPC, there is no additional benefit to add a VPC configuration.
+(https://docs.aws.amazon.com/lambda/latest/operatorguide/networking-vpc.html)
 So if we didn't need to connect to storage, there would be no need to set up VPC either by editing our account's default VPC or creating a new one. 
 
 
