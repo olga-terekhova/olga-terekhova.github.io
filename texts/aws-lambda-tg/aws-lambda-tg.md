@@ -52,7 +52,25 @@ Create a new execution role according to the guide:
 
 https://aws.amazon.com/premiumsupport/knowledge-center/lambda-execution-role-s3-bucket/
 
-Insert the ARN of the S3 bucket and add "/\*" at the end. 
+Insert the ARN of the S3 bucket copied on the previous step and add "/\*" at the end, so that the new inline policy statement looks like this:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "S3AccessStatement",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::s3-925332/*"
+            ]
+        }
+    ]
+}
+```
 
 Go to the list of Lambda functions and select our function. In Configuration - Execution role - Choose Edit. In the dropdown of existing roles choose the previously created role. 
 
