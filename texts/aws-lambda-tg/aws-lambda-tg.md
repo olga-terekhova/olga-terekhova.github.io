@@ -60,19 +60,21 @@ Go to the list of Lambda functions and select our function. In Configuration - E
 
 A sample script reading from S3 would look like this:
 
-` import json
-` import boto3
+```
+import json
+import boto3
  
-` def lambda_handler(event, context):
-`    s3_client = boto3.client("s3")
-`    s3_bucket_name = 's3-925332'
-`    object_key = 'projects/citizenship/cred.config'
-`    file_content = s3_client.get_object(
-`      Bucket=s3_bucket_name, Key=object_key)["Body"].read()
-`    return {
-`        'statusCode': 200,
-`        'body': file_content
-`    }
+def lambda_handler(event, context):
+    s3_client = boto3.client("s3")
+    s3_bucket_name = 's3-925332'
+    object_key = 'projects/citizenship/cred.config'
+    file_content = s3_client.get_object(
+      Bucket=s3_bucket_name, Key=object_key)["Body"].read()
+    return {
+        'statusCode': 200,
+        'body': file_content
+    }
+```
 
 ### Accessing Lambda through REST APIs
 
