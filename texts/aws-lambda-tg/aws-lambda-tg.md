@@ -32,14 +32,25 @@ A sample AWS Lambda function
 Available options...  
 Let it be S3 due to pricing, see...
 
-Create a new S3 bucket. Assign a unique name (tip: generate a random number to generate a unique name).
-Keep ACLs disabled by default. Block all public access to this bucket.
+Create a new S3 bucket. Assign a unique name (tip: generate a random number to generate a unique name).  
+Keep ACLs disabled by default. Block all public access to this bucket.  
+Versioning off for now. What are the downsides of enabling versioning?
 
 ![New bucket created](aws8.png)
+
+Copy the ARN of the new bucket.
+
+Click on the name of the new bucket and go to the Objects tab to create folders and to upload the config file. 
+
+![File uploaded](aws9.png)
+
+
 
 ### Giving Lambda access to S3
 
 https://aws.amazon.com/premiumsupport/knowledge-center/lambda-execution-role-s3-bucket/
+
+Insert the ARN of the S3 bucket.
 
 ### Accessing Lambda through REST APIs
 
