@@ -48,9 +48,13 @@ Click on the name of the new bucket and go to the Objects tab to create folders 
 
 ### Giving Lambda access to S3
 
+Create a new execution role according to the guide:
+
 https://aws.amazon.com/premiumsupport/knowledge-center/lambda-execution-role-s3-bucket/
 
-Insert the ARN of the S3 bucket.
+Insert the ARN of the S3 bucket and add "/\*" at the end. 
+
+Go to the list of Lambda functions and select our function. In Configuration - Execution role - Choose Edit. In the dropdown of existing roles choose previously created role. 
 
 ### Accessing Lambda through REST APIs
 
