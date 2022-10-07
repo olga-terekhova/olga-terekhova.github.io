@@ -105,6 +105,9 @@ https://github.com/mthenw/awesome-layers
 Before layers:
 https://robertorocha.info/setting-up-a-selenium-web-scraper-on-aws-lambda-with-python/
 
+Issues:
+https://stackoverflow.com/questions/67807768/chrome-driver-and-chromium-binaries-are-not-working-on-aws-lambda
+
 
 ### Accessing Lambda through REST APIs
 
