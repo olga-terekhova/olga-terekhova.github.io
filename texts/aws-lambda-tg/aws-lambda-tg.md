@@ -54,7 +54,25 @@ https://aws.amazon.com/premiumsupport/knowledge-center/lambda-execution-role-s3-
 
 Insert the ARN of the S3 bucket and add "/\*" at the end. 
 
-Go to the list of Lambda functions and select our function. In Configuration - Execution role - Choose Edit. In the dropdown of existing roles choose previously created role. 
+Go to the list of Lambda functions and select our function. In Configuration - Execution role - Choose Edit. In the dropdown of existing roles choose the previously created role. 
+
+### Reading from S3
+
+A sample script reading from S3 would look like this:
+
+` import json
+` import boto3
+ 
+` def lambda_handler(event, context):
+`    s3_client = boto3.client("s3")
+`    s3_bucket_name = 's3-925332'
+`    object_key = 'projects/citizenship/cred.config'
+`    file_content = s3_client.get_object(
+`      Bucket=s3_bucket_name, Key=object_key)["Body"].read()
+`    return {
+`        'statusCode': 200,
+`        'body': file_content
+`    }
 
 ### Accessing Lambda through REST APIs
 
