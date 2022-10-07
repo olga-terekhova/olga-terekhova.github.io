@@ -32,7 +32,10 @@ A sample AWS Lambda function
 Available options...  
 Let it be S3 due to pricing, see...
 
-Create a new S3 bucket.
+Create a new S3 bucket. Assign a unique name (tip: generate a random number to generate a unique name).
+Keep ACLs disabled by default. Block all public access to this bucket.
+
+![New bucket created](aws8.png)
 
 ### Giving Lambda access to S3
 
