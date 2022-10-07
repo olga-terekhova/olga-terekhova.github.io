@@ -27,6 +27,14 @@ A sample AWS Lambda function
 
 > ![A stub of AWS function](aws2.png)
 
+### Figuring out storage
+
+Let it be S3
+
+### Giving Lambda access to S3
+
+https://aws.amazon.com/premiumsupport/knowledge-center/lambda-execution-role-s3-bucket/
+
 ### Accessing Lambda through REST APIs
 
 https://stackoverflow.com/questions/50276852/lambda-function-within-vpc-doesnt-have-access-to-public-internet
