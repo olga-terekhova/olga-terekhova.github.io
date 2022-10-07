@@ -102,6 +102,9 @@ https://github.com/vittorio-nardone/selenium-chromium-lambda
 Awesome layers:
 https://github.com/mthenw/awesome-layers
 
+Before layers:
+https://robertorocha.info/setting-up-a-selenium-web-scraper-on-aws-lambda-with-python/
+
 
 ### Accessing Lambda through REST APIs
 
