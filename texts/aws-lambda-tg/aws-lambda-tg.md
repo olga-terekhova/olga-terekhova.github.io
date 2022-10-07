@@ -29,7 +29,10 @@ A sample AWS Lambda function
 
 ### Figuring out storage
 
-Let it be S3
+Available options...  
+Let it be S3 due to pricing, see...
+
+Create a new S3 bucket.
 
 ### Giving Lambda access to S3
 
