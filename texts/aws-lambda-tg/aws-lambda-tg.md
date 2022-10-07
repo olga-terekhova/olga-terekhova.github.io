@@ -94,6 +94,15 @@ def lambda_handler(event, context):
     }
 ```
 
+### Accessing a webpage from Lambda
+
+A layer with Selenium and Chromium in python:
+https://github.com/vittorio-nardone/selenium-chromium-lambda
+
+Awesome layers:
+https://github.com/mthenw/awesome-layers
+
+
 ### Accessing Lambda through REST APIs
 
 https://stackoverflow.com/questions/50276852/lambda-function-within-vpc-doesnt-have-access-to-public-internet
