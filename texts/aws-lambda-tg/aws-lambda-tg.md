@@ -103,10 +103,21 @@ Awesome layers:
 https://github.com/mthenw/awesome-layers
 
 Before layers:
-https://robertorocha.info/setting-up-a-selenium-web-scraper-on-aws-lambda-with-python/
+https://robertorocha.info/setting-up-a-selenium-web-scraper-on-aws-lambda-with-python/ (cool data journalist!)
 
 Issues:
 https://stackoverflow.com/questions/67807768/chrome-driver-and-chromium-binaries-are-not-working-on-aws-lambda
+
+Using pupetter:
+https://awstip.com/how-to-run-puppeteer-on-aws-lambda-using-layers-b1583ebd7120
+(npm) https://acloudguru.com/blog/engineering/serverless-browser-automation-with-aws-lambda-and-puppeteer
+(dockerfile) https://aws.amazon.com/blogs/architecture/field-notes-scaling-browser-automation-with-puppeteer-on-aws-lambda-with-container-image-support/
+(decrease size) https://oxylabs.io/blog/puppeteer-on-aws-lambda
+(configuring) https://medium.com/limehome-engineering/running-pyppeteer-on-aws-lambda-with-serverless-62313b3fe3e2
+
+https://oxylabs.io/blog/puppeteer-on-aws-lambda
+
+
 
 
 ### Accessing Lambda through REST APIs
