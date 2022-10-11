@@ -108,17 +108,14 @@ https://robertorocha.info/setting-up-a-selenium-web-scraper-on-aws-lambda-with-p
 Issues:
 https://stackoverflow.com/questions/67807768/chrome-driver-and-chromium-binaries-are-not-working-on-aws-lambda
 
-Using pupetter:
-https://awstip.com/how-to-run-puppeteer-on-aws-lambda-using-layers-b1583ebd7120
-(layer with puppeteer) https://github.com/RafalWilinski/serverless-puppeteer-layers
-(npm) https://acloudguru.com/blog/engineering/serverless-browser-automation-with-aws-lambda-and-puppeteer
-(dockerfile) https://aws.amazon.com/blogs/architecture/field-notes-scaling-browser-automation-with-puppeteer-on-aws-lambda-with-container-image-support/
-(decrease size) https://oxylabs.io/blog/puppeteer-on-aws-lambda
-(configuring) https://medium.com/limehome-engineering/running-pyppeteer-on-aws-lambda-with-serverless-62313b3fe3e2
-(installing pupeteer) https://www.npmjs.com/package/chrome-aws-lambda
-
-https://oxylabs.io/blog/puppeteer-on-aws-lambda
-
+Using puppetter:  
+https://awstip.com/how-to-run-puppeteer-on-aws-lambda-using-layers-b1583ebd7120  
+(layer with puppeteer) https://github.com/RafalWilinski/serverless-puppeteer-layers  
+(npm) https://acloudguru.com/blog/engineering/serverless-browser-automation-with-aws-lambda-and-puppeteer  
+(dockerfile) https://aws.amazon.com/blogs/architecture/field-notes-scaling-browser-automation-with-puppeteer-on-aws-lambda-with-container-image-support/  
+(decrease size) https://oxylabs.io/blog/puppeteer-on-aws-lambda  
+(configuring) https://medium.com/limehome-engineering/running-pyppeteer-on-aws-lambda-with-serverless-62313b3fe3e2  
+(installing pupeteer) https://www.npmjs.com/package/chrome-aws-lambda  
 
 
 
