@@ -110,6 +110,7 @@ https://stackoverflow.com/questions/67807768/chrome-driver-and-chromium-binaries
 
 Using pupetter:
 https://awstip.com/how-to-run-puppeteer-on-aws-lambda-using-layers-b1583ebd7120
+(layer with puppeteer) https://github.com/RafalWilinski/serverless-puppeteer-layers
 (npm) https://acloudguru.com/blog/engineering/serverless-browser-automation-with-aws-lambda-and-puppeteer
 (dockerfile) https://aws.amazon.com/blogs/architecture/field-notes-scaling-browser-automation-with-puppeteer-on-aws-lambda-with-container-image-support/
 (decrease size) https://oxylabs.io/blog/puppeteer-on-aws-lambda
