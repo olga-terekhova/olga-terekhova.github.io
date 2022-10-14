@@ -122,6 +122,9 @@ https://awstip.com/how-to-run-puppeteer-on-aws-lambda-using-layers-b1583ebd7120
 (some discussion on above) https://stackoverflow.com/questions/57408181/how-to-bundle-headless-chromium-module-with-aws-lambda
 (github) https://github.com/alixaxel/chrome-aws-lambda - looks good but without a preconfigured layer. should use puppetter-core
 
+(fresh preconfigured layer) https://www.npmjs.com/package/@sparticuz/chromium
+https://github.com/Sparticuz/chromium
+
 (fresh preconfigured layer) https://github.com/shelfio/chrome-aws-lambda-layer
 (using above) https://acloudguru.com/blog/engineering/serverless-browser-automation-with-aws-lambda-and-puppeteer
 (also using above) https://www.techmagic.co/blog/running-headless-chrome-with-aws-lambda-layers/
