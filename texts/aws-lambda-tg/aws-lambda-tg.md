@@ -110,12 +110,21 @@ https://stackoverflow.com/questions/67807768/chrome-driver-and-chromium-binaries
 
 Using puppetter:  
 https://awstip.com/how-to-run-puppeteer-on-aws-lambda-using-layers-b1583ebd7120  
-(layer with puppeteer) https://github.com/RafalWilinski/serverless-puppeteer-layers  
+(layer with puppeteer) https://github.com/RafalWilinski/serverless-puppeteer-layers   (not recently updated)
+
+
 (npm) https://acloudguru.com/blog/engineering/serverless-browser-automation-with-aws-lambda-and-puppeteer  
 (dockerfile) https://aws.amazon.com/blogs/architecture/field-notes-scaling-browser-automation-with-puppeteer-on-aws-lambda-with-container-image-support/  
 (decrease size) https://oxylabs.io/blog/puppeteer-on-aws-lambda  
 (configuring) https://medium.com/limehome-engineering/running-pyppeteer-on-aws-lambda-with-serverless-62313b3fe3e2  
+
 (installing pupeteer) https://www.npmjs.com/package/chrome-aws-lambda  
+(some discussion on above) https://stackoverflow.com/questions/57408181/how-to-bundle-headless-chromium-module-with-aws-lambda
+(github) https://github.com/alixaxel/chrome-aws-lambda - looks good but without a preconfigured layer. should use puppetter-core
+
+(fresh preconfigured layer) https://github.com/shelfio/chrome-aws-lambda-layer
+(using above) https://acloudguru.com/blog/engineering/serverless-browser-automation-with-aws-lambda-and-puppeteer
+(also using above) https://www.techmagic.co/blog/running-headless-chrome-with-aws-lambda-layers/
 
 
 
