@@ -128,6 +128,7 @@ https://github.com/Sparticuz/chromium
 (fresh preconfigured layer) https://github.com/shelfio/chrome-aws-lambda-layer
 (using above) https://acloudguru.com/blog/engineering/serverless-browser-automation-with-aws-lambda-and-puppeteer
 (also using above) https://www.techmagic.co/blog/running-headless-chrome-with-aws-lambda-layers/
+(above mentioned in the comments) https://dev.to/gerybbg/puppeteer-in-an-aws-lambda-function-part-2-4hfi
 
 ---
 
