@@ -139,6 +139,12 @@ Go to console - Lambda - Layers - Create layer. Paste the URL.
 
 Go to Lambda - Function - citizenship-ircc. Click on the Layers in the chart which brings you to the bottom of the page. Add a new custom layer and specify it as the newly created chromium-aws.
 
+It's only chromium! 
+Let's find puppeteer too.
+Chromium 107.0.5296.0 - Puppeteer v18.1.0
+
+
+
 ### Accessing Lambda through REST APIs
 
 https://stackoverflow.com/questions/50276852/lambda-function-within-vpc-doesnt-have-access-to-public-internet
