@@ -150,7 +150,7 @@ Chromium 107.0.5296.0 - Puppeteer v18.1.0 - this would make me install puppeteer
 
 Let's try https://github.com/shelfio/chrome-aws-lambda-layer. Go to Lambda - Functions - citizenship-ircc. Click on the Layers in the chart which brings you to the bottom of the page. Add a new custom layer and specify ARN for your region from https://github.com/shelfio/chrome-aws-lambda-layer.
 
-Now the function works! Both dependencies (puppeteer-core and chromium) are found. 
+Now the function works! Both dependencies (puppeteer-core and chromium) are found. This is a default node.js stub created by Amazon with only two checks for dependencies added.
 
 ```
 exports.handler = async (event) => {
