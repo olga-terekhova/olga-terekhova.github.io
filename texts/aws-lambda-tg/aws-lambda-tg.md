@@ -76,7 +76,9 @@ Go to the list of Lambda functions and select our function. In Configuration - E
 
 ### Reading from S3
 
-A sample script reading from S3 would look like this:
+#### Python
+
+A sample script reading from S3 in Python would look like this:
 
 ```
 import json
@@ -93,6 +95,39 @@ def lambda_handler(event, context):
         'body': file_content
     }
 ```
+
+#### Node.js
+
+A sample script reading from S3 in Node.js would look like this
+
+```
+const AWS = require('aws-sdk')
+
+exports.handler = async (event) => {
+    var s3 = new AWS.S3();
+    let contentFile;
+    let response;
+    try {
+    const file = await s3
+      .getObject({ Bucket: 's3-925332', Key: 'projects/citizenship/cred.config' })
+      .promise();
+    contentFile = file.Body.toString();
+    response = {
+        statusCode: 200,
+        body: contentFile,
+    };
+    } catch (err) {
+    response = {
+        statusCode: 500,
+        body: err,
+    };
+    }
+    return response;
+};
+```
+
+https://gist.github.com/apal21/80c2cfe3606d30ae7d1c655ba6100ea4 - thank you for the example!
+
 
 ### Accessing a webpage from Lambda
 
