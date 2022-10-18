@@ -199,6 +199,9 @@ exports.handler = async (event) => {
 };
 ```
 
+An example using puppeteer on nodejs:  
+https://gist.github.com/apal21/4746f9d3935f24485e40d5fd054f3202
+
 ### Accessing Lambda through REST APIs
 
 https://stackoverflow.com/questions/50276852/lambda-function-within-vpc-doesnt-have-access-to-public-internet
