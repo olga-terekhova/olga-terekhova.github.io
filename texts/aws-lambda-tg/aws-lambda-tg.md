@@ -126,6 +126,21 @@ exports.handler = async (event) => {
 };
 ```
 
+```
+const file = await s3
+    .getObject({ Bucket: 's3-925332', Key: 'projects/citizenship/cred.config' })
+    .promise();
+```
+
+same as
+
+```
+const file = await s3.getObject({ Bucket: 's3-925332', Key: 'projects/citizenship/cred.config' }).promise();
+```
+
+An example using puppeteer on nodejs:  
+https://gist.github.com/apal21/4746f9d3935f24485e40d5fd054f3202
+
 https://gist.github.com/apal21/80c2cfe3606d30ae7d1c655ba6100ea4 - thank you for the example!
 
 
@@ -199,8 +214,7 @@ exports.handler = async (event) => {
 };
 ```
 
-An example using puppeteer on nodejs:  
-https://gist.github.com/apal21/4746f9d3935f24485e40d5fd054f3202
+
 
 ### Accessing Lambda through REST APIs
 
