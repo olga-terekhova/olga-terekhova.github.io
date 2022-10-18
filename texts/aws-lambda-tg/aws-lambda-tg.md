@@ -98,7 +98,7 @@ def lambda_handler(event, context):
 
 #### Node.js
 
-A sample script reading from S3 in Node.js would look like this
+A sample script reading from S3 in Node.js would look like this:
 
 ```
 const AWS = require('aws-sdk')
@@ -125,6 +125,11 @@ exports.handler = async (event) => {
     return response;
 };
 ```
+
+AWS Lambda has acces to AWS SDK by default, but not the latest version. 
+
+Not that:
+
 
 ```
 const file = await s3
