@@ -128,7 +128,7 @@ exports.handler = async (event) => {
 
 AWS Lambda has acces to AWS SDK by default, but not the latest version. 
 
-Not that:
+Note that:
 
 
 ```
