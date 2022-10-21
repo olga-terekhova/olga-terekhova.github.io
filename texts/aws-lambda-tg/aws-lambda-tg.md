@@ -210,7 +210,7 @@ https://medium.com/@anjanava.biswas/nodejs-runtime-environment-with-aws-lambda-l
 
 Like  
 ```
-npm install puppeteer-core@18.1.0
+npm install --save puppeteer-core@18.1.0
 ```
 
 Discussion on how to install:  
