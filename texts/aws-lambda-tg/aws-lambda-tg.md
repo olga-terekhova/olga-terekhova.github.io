@@ -259,7 +259,9 @@ exports.handler = async (event) => {
 };
 ```
 
+### Manipulating DOM
 
+https://stackoverflow.com/questions/55237748/how-to-get-text-inside-div-in-puppeteer
 
 ### Accessing Lambda through REST APIs
 
