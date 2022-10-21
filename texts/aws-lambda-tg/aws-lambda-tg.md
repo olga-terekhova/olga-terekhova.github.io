@@ -206,6 +206,11 @@ We probably will need to install npm locally to create the layer.
 Let's follow these steps:  
 https://medium.com/@anjanava.biswas/nodejs-runtime-environment-with-aws-lambda-layers-f3914613e20e
 
+Like  
+```
+npm install puppeteer-core@18.1.0
+```
+
 ---
 
 Let's try https://github.com/shelfio/chrome-aws-lambda-layer. Go to Lambda - Functions - citizenship-ircc. Click on the Layers in the chart which brings you to the bottom of the page. Add a new custom layer and specify ARN for your region from https://github.com/shelfio/chrome-aws-lambda-layer.
