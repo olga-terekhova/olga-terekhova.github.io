@@ -79,7 +79,8 @@ Insert the ARN of the S3 bucket copied on the previous step and add "/\*" at the
 
 Go to the list of Lambda functions and select our function. In Configuration - Execution role - Choose Edit. In the dropdown of existing roles choose the previously created role. 
 
-Actually, let's give it all access there is, so that Lambda functions can also write to S3.
+Actually, let's give it all access there is, so that Lambda functions can also write to S3.  
+https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_s3_rw-bucket.html
 
 ### Reading from S3
 
