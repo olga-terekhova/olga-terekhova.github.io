@@ -45,6 +45,11 @@ Click on the name of the new bucket and go to the Objects tab to create folders 
 ![File uploaded](aws9.png)
 
 
+### Checklist for the lambda function
+
+- Has access to S3 through execution role
+- Has 512 mb allocated memory and 30 timeout
+- Has chromium and puppeteer-core installed in Lambda layers
 
 ### Giving Lambda access to S3
 
