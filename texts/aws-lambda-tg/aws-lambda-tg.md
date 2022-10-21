@@ -211,6 +211,21 @@ Like
 npm install puppeteer-core@18.1.0
 ```
 
+Discussion on how to install:  
+https://stackoverflow.com/questions/34437900/how-to-load-npm-modules-in-aws-lambda
+
+How to use github for building layers:  
+https://www.qloudx.com/a-simpler-way-to-manage-lambda-layers-with-npm-dependencies/
+
+From AWS:  
+https://docs.aws.amazon.com/lambda/latest/dg/nodejs-package.html
+
+Also these:  
+https://blog.insighture.com/article/running-puppeteer-in-lambda/
+
+Some thought about whether two libraries should be in the same layer:  
+https://dev.to/gerybbg/puppeteer-in-an-aws-lambda-function-part-2-4hfi
+
 ---
 
 Let's try https://github.com/shelfio/chrome-aws-lambda-layer. Go to Lambda - Functions - citizenship-ircc. Click on the Layers in the chart which brings you to the bottom of the page. Add a new custom layer and specify ARN for your region from https://github.com/shelfio/chrome-aws-lambda-layer.
