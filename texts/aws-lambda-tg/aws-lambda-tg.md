@@ -203,7 +203,15 @@ Chromium 107.0.5296.0 - Puppeteer v18.1.0 - this would make me install puppeteer
 
 We probably will need to install npm locally to create the layer.
 
-#### Installing nodejs and uploading dependencies
+
+Order of merge layers doesn't matter in our case (when does it?).
+
+#### Installing chromium
+
+
+#### Installing puppeteer-core
+
+##### Installing nodejs and uploading dependencies
 
 Let's follow these steps:  
 https://medium.com/@anjanava.biswas/nodejs-runtime-environment-with-aws-lambda-layers-f3914613e20e
