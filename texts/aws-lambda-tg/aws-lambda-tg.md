@@ -79,6 +79,8 @@ Insert the ARN of the S3 bucket copied on the previous step and add "/\*" at the
 
 Go to the list of Lambda functions and select our function. In Configuration - Execution role - Choose Edit. In the dropdown of existing roles choose the previously created role. 
 
+Actually, let's give it all access there is, so that Lambda functions can also write to S3.
+
 ### Reading from S3
 
 #### Python
@@ -259,9 +261,83 @@ exports.handler = async (event) => {
 };
 ```
 
-### Manipulating DOM
+### Accessing DOM, making screenshots
 
 https://stackoverflow.com/questions/55237748/how-to-get-text-inside-div-in-puppeteer
+
+
+```
+const AWS = require('aws-sdk')  
+const puppeteer = require("puppeteer-core");
+const chromium = require("@sparticuz/chromium");
+
+async function checkPerson (credPerson) {
+
+    var namePerson = credPerson.name;
+    var loginPerson = credPerson.login;
+    var passwordPerson = credPerson.password;
+    
+    let browser;
+    try {
+        browser = await puppeteer.launch({
+          args: chromium.args,
+          defaultViewport: chromium.defaultViewport,
+          executablePath: await chromium.executablePath,
+          headless: chromium.headless,
+          ignoreHTTPSErrors: true,
+        });
+        const page = await browser.newPage();
+        await page.goto("https://cst-ssc.apps.cic.gc.ca/en/login");
+        const signInButton = await page.waitForXPath("//button[text()[contains(., 'Sign into your tracker account')]]");
+        const text = await (await signInButton.getProperty('textContent')).jsonValue();
+        await signInButton.click();
+        const screenshot = await page.screenshot();
+        var s3 = new AWS.S3();
+        const params = { Bucket: 's3-925332', Key: 'projects/citizenship/screenshot.png', Body: screenshot };
+        await s3.putObject(params).promise();
+        
+    }
+    catch (e){
+        console.log(e);
+        console.log("Error");
+    }
+    finally {
+        await browser.close();
+    }
+    
+}
+
+exports.handler = async (event) => {
+    
+    var s3 = new AWS.S3();
+    let contentFile;
+    let response;
+    try {
+        const file = await s3
+         .getObject({ Bucket: 's3-925332', Key: 'projects/citizenship/cred.config' })
+         .promise();
+        contentFile = file.Body.toString();
+        response = {
+            statusCode: 200,
+            body: contentFile,
+        };
+        let credFile = JSON.parse(contentFile);
+        let credentials = credFile.credentials;
+        for (let cred in credentials){
+            if (credentials[cred].check == 'TRUE') {
+                await checkPerson(credentials[cred]);
+            }
+        }
+    
+    } catch (err) {
+        response = {
+            statusCode: 500,
+            body: err,
+        };
+    }
+    return response;
+};
+```
 
 ### Accessing Lambda through REST APIs
 
