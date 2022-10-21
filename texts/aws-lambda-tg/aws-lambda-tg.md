@@ -201,6 +201,8 @@ It's only chromium!
 Let's find puppeteer too.
 Chromium 107.0.5296.0 - Puppeteer v18.1.0 - this would make me install puppeteer-core from somewhere else. 
 
+We probably will need to install npm locally to create the layer.
+
 ---
 
 Let's try https://github.com/shelfio/chrome-aws-lambda-layer. Go to Lambda - Functions - citizenship-ircc. Click on the Layers in the chart which brings you to the bottom of the page. Add a new custom layer and specify ARN for your region from https://github.com/shelfio/chrome-aws-lambda-layer.
