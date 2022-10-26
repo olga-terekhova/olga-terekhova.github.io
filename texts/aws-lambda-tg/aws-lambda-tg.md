@@ -421,6 +421,50 @@ exports.handler = async (event) => {
 
 ```
 
+### Sending email with the function details
+
+https://aws.amazon.com/premiumsupport/knowledge-center/lambda-send-email-ses/
+
+Execution role
+
+Actually, we'll create a new function altogether. We will not need to send email everytime. But for the simplicity sake I will use the same execution role for both functions. 
+
+Go to IAM -> Roles -> current lambda role (LambdaWriteAccessRole in my case) -> Permissions -> Custom policy (LambdaAccessS3 in my case) -> JSON tab.
+Add the code to other statements:
+
+```
+{
+            "Effect": "Allow",
+            "Action": [
+                "ses:SendEmail",
+                "ses:SendRawEmail"
+            ],
+            "Resource": "*"
+        }
+```
+
+Create identity and verify your email address. For our purposes we'll stay in the Amazon SES Sandbox environment, meaning that we'll send emails from a verified email address to a verified email address (might be the same one). 
+
+### Chaining Lambda functions into a sequence
+
+Options:
+
+- A higher level lambda function invoking other funtions:
+    - Event
+    - Response
+- Step Functions (Amazon scripts)
+- Flags system (Functions start up after previous functions leave flag files). 
+
+https://www.refinery.io/post/how-to-chain-serverless-functions-call-invoke-a-lambda-from-another-lambda  
+(funny how there ebbs and flows between code-only and GUI methods to create sequences. Datastage had a tool to design sequences, py code evolved to be handled by Airflow, now AWS Lambda need there own dedicated tools for sequencing)  
+https://www.refinery.io/post/jumping-the-rabbit-hole-walking-around-web-app-obfuscation-with-request-interception - mmm, some rabbit hole about scraping obfuscated sites. Also, maps!  
+
+
+### Scheduling  
+
+https://www.refinery.io/post/how-to-schedule-an-aws-lambda-execution-serverless-scheduling-cron-jobs  
+
+
 ### Accessing Lambda through REST APIs
 
 https://stackoverflow.com/questions/50276852/lambda-function-within-vpc-doesnt-have-access-to-public-internet
