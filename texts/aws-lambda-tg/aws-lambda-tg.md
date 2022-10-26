@@ -445,6 +445,32 @@ Add the code to other statements:
 
 Create identity and verify your email address. For our purposes we'll stay in the Amazon SES Sandbox environment, meaning that we'll send emails from a verified email address to a verified email address (might be the same one). 
 
+In order to avoid storing your email in the source code, make a new environment variable for the function, with key = "email" and value = your email.
+
+```
+var aws = require("aws-sdk");
+var ses = new aws.SES({ region: "ca-central-1" });
+var emailAddress = process.env.email;
+
+exports.handler = async function (event) {
+  var params = {
+    Destination: {
+      ToAddresses: [emailAddress],
+    },
+    Message: {
+      Body: {
+        Text: { Data: "Test" },
+      },
+
+      Subject: { Data: "Test Email" },
+    },
+    Source: emailAddress,
+  };
+  return ses.sendEmail(params).promise();
+};
+```
+
+
 ### Chaining Lambda functions into a sequence
 
 Options:
