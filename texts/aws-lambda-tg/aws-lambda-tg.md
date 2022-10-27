@@ -527,9 +527,9 @@ const lambdaParams = {
 https://www.refinery.io/post/how-to-schedule-an-aws-lambda-execution-serverless-scheduling-cron-jobs  
 
 Use EventBridge to schedule daily run of the lambda function.   
-![Creating an event on a schedule](awsEventBridge1.png)
-![Specifying the schedule](awsEventBridge2.png)
-![Specifying the function to run](awsEventBridge3.png)
+<span style="display:block;text-align:center">![Creating an event on a schedule](awsEventBridge1.png)</span>
+<span style="display:block;text-align:center">![Specifying the schedule](awsEventBridge2.png)</span>
+<span style="display:block;text-align:center">![Specifying the function to run](awsEventBridge3.png)</span>
 
 ### Accessing Lambda through REST APIs
 
