@@ -500,6 +500,28 @@ https://www.refinery.io/post/how-to-chain-serverless-functions-call-invoke-a-lam
 https://www.refinery.io/post/jumping-the-rabbit-hole-walking-around-web-app-obfuscation-with-request-interception - mmm, some rabbit hole about scraping obfuscated sites. Also, maps!  
 
 
+For now, Invoking with the event type:
+
+In the execution role add this policy (copy the ARN of your function that sends email):
+```
+{
+            "Effect": "Allow",
+            "Action": "lambda:InvokeFunction",
+            "Resource": "arn:aws:lambda:ca-central-1:633389222153:function:citizenship-status-email"
+        }
+```
+
+The invocation: 
+       
+```
+const lambdaParams = {
+            FunctionName: 'citizenship-status-email',
+            InvocationType: 'Event',
+            };
+        var lambda = new AWS.Lambda();
+        const lambdaResult = await lambda.invoke(lambdaParams).promise();
+```
+
 ### Scheduling  
 
 https://www.refinery.io/post/how-to-schedule-an-aws-lambda-execution-serverless-scheduling-cron-jobs  
