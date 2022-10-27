@@ -23,9 +23,9 @@ EC2 vs Lambda
 
 A sample AWS Lambda function
 
-> ![A list of Labmda functions](aws1.png)
+<p align="center"><img src="aws1.png" alt="A list of Labmda functions" width="500" style="text-align:center;"></p>
 
-> ![A stub of AWS function](aws2.png)
+<p align="center"><img src="aws2.png" alt="A stub of AWS function" width="500" style="text-align:center;"></p>
 
 ### Figuring out storage
 
@@ -36,14 +36,13 @@ Create a new S3 bucket. Assign a unique name (tip: generate a random number to g
 Keep ACLs disabled by default. Block all public access to this bucket.  
 Versioning off for now. What are the downsides of enabling versioning?
 
-![New bucket created](aws8.png)
+<p align="center"><img src="aws8.png" alt="New bucket created" width="500" style="text-align:center;"></p>
 
 Copy the ARN of the new bucket.
 
 Click on the name of the new bucket and go to the Objects tab to create folders and to upload the config file. 
 
-![File uploaded](aws9.png)
-
+<p align="center"><img src="aws9.png" alt="File uploaded" width="500" style="text-align:center;"></p>
 
 ### Checklist for the lambda function
 
