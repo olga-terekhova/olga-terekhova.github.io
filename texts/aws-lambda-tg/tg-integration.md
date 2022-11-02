@@ -56,6 +56,20 @@ Steps:
        }
    ```
 
-4. Import requests module into the lambda function
-
+4. Import requests module into the lambda function. 
    
+   To install requests you may follow this tutorial: https://www.gcptutorials.com/article/how-to-use-requests-module-in-aws-lambda . Basically you need to install requests locally, zip it up and upload to AWS. 
+   
+   Something similar can be done using PyCharm:
+   1. Create a new project requestsLayer and choose a new venv for it.
+   2. Install requests in this project.
+   3. Go to the project path requestsLayer\venv\Lib\site-packages, create a directory 'python' and copy there directories:
+      - certifi, 
+      - charset_normalizer
+      - idna
+      - urllib3
+      - requests
+      This list includes requests and required dependencies. This list can be compiled from the list of directories pip creates when installing the library (excluding pip-related libraries like pip, wheel, setuptools), or from the METADATA file in the requests-\*-info directory. 
+   4. Zip up the python directory into the file python-requests.zip.
+   <p align="center"><img src="requests_zip1.png" alt="Creating a new bot" width="500" style="text-align:center;"></p>
+   5. Upload the python-requests.zip, create a Lambda layer pointing at this file and Add this layer to the Lambda function.
