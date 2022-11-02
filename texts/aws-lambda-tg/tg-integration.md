@@ -73,3 +73,15 @@ Steps:
    4. Zip up the python directory into the file python-requests.zip.
       <p align="center"><img src="requests_zip1.png" alt="Creating a new bot" width="500" style="text-align:center;"></p>
    5. Upload the python-requests.zip, create a Lambda layer pointing at this file and add this layer to the Lambda function.
+
+5. Use requests to send messages back to the chat with the bot.
+   
+   Now we can add following lines to send the message back to the bot.
+   
+   ```
+   import requests
+   response = "Hello {}, I will check the status".format(first_name)
+   data_res = {"text": response.encode("utf8"), "chat_id": chat_id}
+   url = BASE_URL + "/sendMessage"
+   requests.post(url, data_res)
+   ```
