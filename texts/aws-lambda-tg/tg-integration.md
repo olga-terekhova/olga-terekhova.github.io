@@ -35,9 +35,6 @@ Steps:
    import os
    import sys
    
-   here = os.path.dirname(os.path.realpath(__file__))
-   sys.path.append(os.path.join(here, "./vendored"))
-   
    TOKEN = os.environ['TELEGRAM_TOKEN']
    BASE_URL = "https://api.telegram.org/bot{}".format(TOKEN)
    
