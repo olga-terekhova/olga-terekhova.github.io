@@ -13,9 +13,10 @@ Steps:
    1. Execution role - select that predefined role with S3 access right away.
    2. Environment variables - add a new variable TELEGRAM_TOKEN and paste the value of the token. 
    3. Create an API endpoint as a trigger. Go to Function overview - Add trigger. Follow the steps described at https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html:  
-   <p align="center"><img src="aws_api1.png" alt="Creating a new bot" width="500" style="text-align:center;"></p>
+   <p align="center"><img src="aws_api1.png" alt="Creating a new bot" width="500" style="text-align:center;"></p>  
+   The newly created trigger will show the API endpoint. 
 3. Provide the API endpoint as a webhook for the bot.  
-   Send this command in the terminal:
+   Send this command in the terminal (replace [TELEGRAM_TOKEN] and [API_ENDPOINT] with your values):
    
    ```
    curl --request POST --url https://api.telegram.org/bot[TELEGRAM_TOKEN]/setWebhook --header 'content-type: application/json' --data '{"url": "[API_ENDPOINT]"}'
