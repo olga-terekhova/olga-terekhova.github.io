@@ -27,36 +27,37 @@ Steps:
    ```
    {"ok":true,"result":true,"description":"Webhook was set"}
    ```
+4. Write code in Python to handle incoming requests from the bot in the lambda function.
+   A simple program which reads a message sent by the bot:
+   
+   ```
+   import json
+   import os
+   import sys
+   
+   here = os.path.dirname(os.path.realpath(__file__))
+   sys.path.append(os.path.join(here, "./vendored"))
+   
+   # import requests
+   
+   TOKEN = os.environ['TELEGRAM_TOKEN']
+   BASE_URL = "https://api.telegram.org/bot{}".format(TOKEN)
+   
+   def lambda_handler(event, context):
+       data = json.loads(event["body"])
+       message = str(data['message']["text"])
+       chat_id = data["message"]["chat"]["id"]
+       first_name = str(data["message"]["chat"]["first_name"])
+       if "check" in message:
+           response = "Hello {}, I will check the status".format(first_name)
+           print(response)
+       
+       return {
+           'statusCode': 200,
+           'body': json.dumps('Hello from Lambda!')
+       }
+   ```
 
-A simple program which reads a message sent by the bot:
-
-```
-import json
-import os
-import sys
-
-here = os.path.dirname(os.path.realpath(__file__))
-sys.path.append(os.path.join(here, "./vendored"))
-
-# import requests
-
-TOKEN = os.environ['TELEGRAM_TOKEN']
-BASE_URL = "https://api.telegram.org/bot{}".format(TOKEN)
-
-def lambda_handler(event, context):
-    data = json.loads(event["body"])
-    message = str(data['message']["text"])
-    chat_id = data["message"]["chat"]["id"]
-    first_name = str(data["message"]["chat"]["first_name"])
-    if "check" in message:
-        response = "Hello {}, I will check the status".format(first_name)
-        print(response)
-    
-    return {
-        'statusCode': 200,
-        'body': json.dumps('Hello from Lambda!')
-    }
-```
-
+4. Import requests module into the lambda function
 
    
