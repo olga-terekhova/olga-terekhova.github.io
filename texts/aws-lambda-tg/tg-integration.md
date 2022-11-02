@@ -22,4 +22,10 @@ Steps:
    curl --request POST --url https://api.telegram.org/bot[TELEGRAM_TOKEN]/setWebhook --header 'content-type: application/json' --data '{"url": "[API_ENDPOINT]"}'
    ```
    
+   Response:  
+   
+   ```
+   {"ok":true,"result":true,"description":"Webhook was set"}
+   ```
+   
    
