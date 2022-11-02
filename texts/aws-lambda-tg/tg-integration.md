@@ -68,7 +68,7 @@ Steps:
       - charset_normalizer
       - idna
       - urllib3
-      - requests
+      - requests  
       This list includes requests and required dependencies. This list can be compiled from the list of directories pip creates when installing the library (excluding pip-related libraries like pip, wheel, setuptools), or from the METADATA file in the requests-\*-info directory. 
    4. Zip up the python directory into the file python-requests.zip.
    <p align="center"><img src="requests_zip1.png" alt="Creating a new bot" width="500" style="text-align:center;"></p>
