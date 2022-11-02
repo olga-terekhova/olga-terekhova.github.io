@@ -85,3 +85,5 @@ Steps:
    url = BASE_URL + "/sendMessage"
    requests.post(url, data_res)
    ```
+   
+   <p align="center"><img src="bot_msg1.png" alt="Answer in the bot" width="500" style="text-align:center;"></p>
