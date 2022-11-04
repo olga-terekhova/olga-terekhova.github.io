@@ -167,4 +167,4 @@ Steps:
              url = BASE_URL + "/sendPhoto"
              requests.post(url, data = data_res, files = file_dict)
          ```
-      
+   TO-DO: iterate through the list of people to check (maybe send them over from the last step)
