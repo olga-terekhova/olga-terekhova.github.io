@@ -138,8 +138,17 @@ Steps:
           }
    
       ```
+   
+   6. While writing the function and debugging, we can create a test event with the following content in Event JSON:
       
-   6. Send screenshots of timelines
+      ```
+      {
+      "name": "Olga",
+      "chat_id": "219021910"
+      }
+      ```
+
+   7. Send screenshots of timelines
       1. Iterate through files to return pictures
       2. Form a request using multipart-data option and pass the file as a parameter
       
