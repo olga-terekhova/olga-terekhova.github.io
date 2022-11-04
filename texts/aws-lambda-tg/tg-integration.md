@@ -150,5 +150,21 @@ Steps:
 
    7. Send screenshots of timelines
       1. Iterate through files to return pictures
-      2. Form a request using multipart-data option and pass the file as a parameter
+      2. Transform each file to base64 string
+      3. Form a request using multipart-data option and pass the file as a parameter  
+         
+         ```
+         listKeysPic = s3_client.list_objects_v2(Bucket = BUCKET_NAME, Delimiter = '/', Prefix = PROJECT_PATH + 'output/timeline-pic/');
+         keysPicContents = listKeysPic['Contents']
+         print(keysPicContents)
+         
+         for obj_key in keysPicContents:
+             file_key = obj_key['Key']
+             file = s3_client.get_object(Bucket = BUCKET_NAME, Key = file_key)
+             file_content = file['Body'].read()
+             file_dict = {"photo": file_content}
+             data_res = {"chat_id": chat_id, "caption": "Test Caption"}
+             url = BASE_URL + "/sendPhoto"
+             requests.post(url, data = data_res, files = file_dict)
+         ```
       
