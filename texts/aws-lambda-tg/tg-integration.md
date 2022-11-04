@@ -150,7 +150,7 @@ Steps:
 
    7. Send screenshots of timelines
       1. Iterate through files to return pictures
-      2. Transform each file to base64 string
+      2. Open the file
       3. Form a request using multipart-data option and pass the file as a parameter  
          
          ```
