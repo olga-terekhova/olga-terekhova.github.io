@@ -23,7 +23,7 @@ b64_message = f64.decode('utf-8')
 Because I just sent a file:  
 
 ```
- file_content = file['Body'].read()
+file_content = file['Body'].read()
 file_dict = {"photo": file_content}
 data_res = {"chat_id": chat_id, "caption": "Test Caption"}
 url = BASE_URL + "/sendPhoto" 
