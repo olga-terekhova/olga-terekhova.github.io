@@ -8,3 +8,6 @@ Compare encoding into base64 in python:
 https://stackabuse.com/encoding-and-decoding-base64-strings-in-python/
 and nodejs:  
 https://stackabuse.com/encoding-and-decoding-base64-strings-in-node-js/
+
+Interesting library for asynchrounous work with Telegram bots:  
+https://github.com/aiogram/aiogram
