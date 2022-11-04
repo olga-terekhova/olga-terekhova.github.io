@@ -87,7 +87,46 @@ Steps:
 
 6. Create a new Python 3.9 Lambda function named citizenship-status-bot-send to actually send the results. As the scraping function is quite bulky, I'm not a fan of the initial function being idle for a minute to get the results. Let's try running the intake function, the scraping function and then the sending function. 
    1. Execution role - select that predefined role with S3 access right away.
-   2. Environment variables - add a new variable TELEGRAM_TOKEN and paste the value of the token. 
+   2. Environment variables:
+      - Add a new variable TELEGRAM_TOKEN and paste the value of the token. 
+      - Add a new variable BUCKET_NAME and paste the value of S3 bucket.
    3. Add the python-requests layer.
-   4. Add a parameter called chat. We expect this parameter to be a JSON of the following format:  
+   4. We will use the parameter event expecting it to contain the following:  
       {"name":"first name of the user", "chat_id":"id of the chat"}
+   5. Write code for taking text files from S3 and sending the result back to the telegram chat:
+      
+      ```
+      def lambda_handler(event, context):
+          s3_client = boto3.client("s3")
+          listKeysText = s3_client.list_objects_v2(Bucket = BUCKET_NAME, Delimiter = '/', Prefix = PROJECT_PATH + 'output/timeline-text/');
+          keysTextContents = listKeysText['Contents']
+          print(keysTextContents)
+          str_update = ''
+          
+          for obj_key in keysTextContents:
+              file_key = obj_key['Key']
+              file = s3_client.get_object(Bucket = BUCKET_NAME, Key = file_key)
+              file_content = file['Body'].read()
+              file_dict = json.loads(file_content)
+              print(file_dict)
+              str_update += (file_dict['name'] + ': ' + file_dict['lastUpdateDate'] + ' | ')
+          
+          str_update = 'Dates of last update | ' + str_update
+          
+          first_name = event['name']
+          chat_id = event['chat_id']
+          
+          response = "{}, this is your result: \n".format(first_name) + str_update
+          data_res = {"text": response.encode("utf8"), "chat_id": chat_id}
+          url = BASE_URL + "/sendMessage"
+      
+          requests.post(url, data_res)
+              
+          return {
+              'statusCode': 200,
+              'body': json.dumps('Hello from Lambda!')
+          }
+   
+      ```
+      
+      
