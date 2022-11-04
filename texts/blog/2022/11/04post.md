@@ -29,3 +29,16 @@ data_res = {"chat_id": chat_id, "caption": "Test Caption"}
 url = BASE_URL + "/sendPhoto" 
 requests.post(url, data = data_res, files = file_dict)
 ```
+
+This is how to get a file and send it (https://stackoverflow.com/questions/38685619/how-to-send-an-embedded-image-along-with-text-in-a-message-via-telegram-bot-api):  
+
+```
+remote_image = requests.get(img_url)
+photo = io.BytesIO(remote_image.content)
+photo.name = 'img.png'
+files = {'photo': photo}
+
+req = requests.post(url=bot_url, data=payload, files=files)
+response = req.json()
+print(response)
+```
