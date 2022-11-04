@@ -139,4 +139,7 @@ Steps:
    
       ```
       
+   6. Send screenshots of timelines
+      1. Iterate through files to return pictures
+      2. Form a request using multipart-data option and pass the file as a parameter
       
