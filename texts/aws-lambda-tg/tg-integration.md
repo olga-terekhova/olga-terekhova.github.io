@@ -96,6 +96,16 @@ Steps:
    5. Write code for taking text files from S3 and sending the result back to the telegram chat:
       
       ```
+      import json
+      import boto3
+      import requests
+      import os
+      
+      TOKEN = os.environ['TELEGRAM_TOKEN']
+      BASE_URL = "https://api.telegram.org/bot{}".format(TOKEN)
+      BUCKET_NAME = os.environ['BUCKET_NAME']  # name of the AWS S3 bucket to store configs and results
+      PROJECT_PATH = 'projects/citizenship/' # path in the S3 bucket to the project directory 
+
       def lambda_handler(event, context):
           s3_client = boto3.client("s3")
           listKeysText = s3_client.list_objects_v2(Bucket = BUCKET_NAME, Delimiter = '/', Prefix = PROJECT_PATH + 'output/timeline-text/');
