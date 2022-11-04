@@ -139,7 +139,7 @@ Steps:
    
       ```
    
-   6. While writing the function and debugging, we can create a test event with the following content in Event JSON:
+   6. While writing the function and debugging, we can find out the value of chat_id and create a test event with the following content in Event JSON:
       
       ```
       {
